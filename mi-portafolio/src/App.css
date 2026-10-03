@@ -1,0 +1,228 @@
+ ```css
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252238;
+  background: #f6f3ff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, #e8ddff 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #dff7f2 0%, transparent 35%),
+    #f8f7fc;
+}
+
+main {
+  width: min(1000px, 90%);
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Presentación */
+
+.presentacion {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 50px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6c4ab6, #8f6dd8);
+  color: white;
+  box-shadow: 0 20px 45px rgba(72, 48, 120, 0.2);
+}
+
+.presentacion::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  right: -50px;
+  top: -50px;
+}
+
+.saludo {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 3.8rem;
+  letter-spacing: -2px;
+}
+
+.presentacion p:last-child {
+  max-width: 650px;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* Títulos */
+
+section:not(.presentacion) {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 22px;
+  font-size: 2rem;
+  color: #30264a;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #8f6dd8;
+}
+
+/* Tecnologías */
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.tecnologias li {
+  padding: 12px 20px;
+  border: 1px solid #e4def5;
+  border-radius: 50px;
+  background: white;
+  color: #62449d;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(70, 50, 100, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tecnologias li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(70, 50, 100, 0.14);
+}
+
+/* Proyectos */
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  position: relative;
+  padding: 28px;
+  border: 1px solid #e7e1f3;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(60, 45, 90, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta::before {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #8f6dd8;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(60, 45, 90, 0.14);
+}
+
+.tarjeta h3 {
+  margin: 0 0 12px;
+  color: #62449d;
+  font-size: 1.35rem;
+}
+
+.tarjeta p {
+  margin: 0;
+  color: #625d6f;
+  line-height: 1.7;
+}
+
+/* Contacto */
+
+section:last-child {
+  padding: 30px;
+  border-radius: 20px;
+  background: #30264a;
+  color: white;
+}
+
+section:last-child h2 {
+  color: white;
+}
+
+section:last-child h2::after {
+  background: #b9a2ed;
+}
+
+section:last-child p {
+  line-height: 1.7;
+}
+
+a {
+  color: #cdbcf5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+  main {
+    width: 92%;
+    padding: 25px 0;
+  }
+
+  .presentacion {
+    padding: 45px 25px;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  .presentacion p:last-child {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .tecnologias li {
+    padding: 10px 15px;
+  }
+
+  section:last-child {
+    padding: 25px;
+  }
+}
+```
