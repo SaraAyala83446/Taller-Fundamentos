@@ -1,75 +1,56 @@
-# React + TypeScript + Vite
+ # Mi portafolio personal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es mi portafolio personal, realizado con **Vite, React y TypeScript**.
 
-Currently, two official plugins are available:
+En la página presento información sobre mí, las tecnologías que estoy aprendiendo y algunos de los proyectos que he realizado durante mi formación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías
 
-## React Compiler
+Las tecnologías que utilicé en este proyecto son:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* React
+* Vite
 
-## Expanding the ESLint configuration
+## Componentes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+El portafolio está dividido en diferentes componentes de React:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Presentacion:** muestra mi nombre y una pequeña descripción sobre mí.
+* **ListaTecnologias:** recibe las tecnologías por medio de props y las muestra en una lista.
+* **ListaProyectos:** recibe los proyectos por medio de props y los muestra utilizando `map()`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Fila creativa
 
+Es un proyecto realizado con React y TypeScript. Lo utilicé para practicar el modelado de datos y la creación de componentes.
+
+## Contacto
+
+Mi correo electrónico es:
+
+**[saraayala88999@gmail.com](mailto:saraayala88999@gmail.com)**
+
+## ¿Cómo ejecutar el proyecto?
+
+Primero se deben instalar las dependencias con:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Después se inicia el proyecto con:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Luego se puede abrir en el navegador el enlace que aparece en la terminal.
+
+## Sobre el proyecto
+
+Este proyecto lo realicé como parte de mi aprendizaje de React y TypeScript. Practiqué la creación de componentes, el uso de props, arreglos, `map()` y CSS para darle diseño y hacerlo adaptable a diferentes tamaños de pantalla.
